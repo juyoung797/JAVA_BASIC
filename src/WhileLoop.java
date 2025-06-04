@@ -2,9 +2,8 @@ public class WhileLoop {
     //초기값 세팅
     int i = 0;
     boolean a = false;
-    //키입력
-    int input = 8;
-    
+    int input = 2;
+
     public void run() {
         while (i < 5) {
             System.out.println(i); //반복할 코드
@@ -49,7 +48,7 @@ public class WhileLoop {
                     System.out.println("물");
                     break;
                 default:
-                    System.out.println("1, 2, 3 중에 입력하세요");
+                    System.out.println("잘못 고름");
             }
             input = 0;
         } while (input != 0);
