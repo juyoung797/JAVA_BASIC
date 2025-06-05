@@ -20,4 +20,16 @@ public class ForLoop {
             System.out.println();
         }
     }
+    public void func369() {
+        for (int i = 1; i <= 20; i++) {
+            if (i >= 15) {
+                break;
+            }
+            if (i % 3 == 0) {
+                System.out.printf("(  ) ");
+                continue;
+            }
+            System.out.printf("%d ",i);
+        }
+    }
 }
