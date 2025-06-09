@@ -15,4 +15,28 @@ public class Arrays {
         }
         System.out.println(sum);
     }
+    public static void run() {
+        String message = "Hello, Java!";
+        System.out.println(message.length());
+        System.out.println(message.toLowerCase());
+        System.out.println(message.toUpperCase());
+        System.out.println(message.indexOf("J"));
+        System.out.println(message.indexOf("l"));
+        System.out.println(message.indexOf("a"));
+        System.out.println(message.substring(0));
+        System.out.println(message.substring(1));
+        char c = 'l';
+//        char[] array = message.toCharArray();
+        for (int i = 0; i < message.length(); i++) {
+            if (message.substring(i, i + 1).equals("l")) {
+                System.out.println(i);
+                break;
+            }
+        }
+        String address = "0x120819f5573ac3A530e6172b1581613A09b4b338";
+        System.out.println(
+                address.substring(0, 7)
+                        + address.substring(address.length() - 5)
+        );
+    }
 }

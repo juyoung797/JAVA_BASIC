@@ -1,27 +1,28 @@
 public class WhileLoop {
     //초기값 세팅
-    int i = 0;
-    boolean a = false;
-    int input = 2;
 
-    public void run() {
+    public static void run() {
+        int i = 0;
         while (i < 5) {
             System.out.println(i); //반복할 코드
             i++; //값 증가,감소
         }
     }
-    public void infiniteWhileLoop() {
+    public static void infiniteWhileLoop() {
+        boolean a = false;
         while (a) {
             System.out.println("무한루프");
         }
     }
     //최소 1번 실행을 보장받는 do-while loop
-    public void infiniteDoWhileLoop2() {
+    public static void infiniteDoWhileLoop2() {
+        boolean a = false;
+
         do {
             System.out.println("무한루프");
         } while (a);
     }
-    public void whileCase() {
+    public static void whileCase() {
         boolean a = true;
         int b = 1;
         while (a) {
@@ -33,7 +34,8 @@ public class WhileLoop {
             }
         }
     }
-    public void doWhileCase() {
+    public static void doWhileCase() {
+        int input = 2;
         do {
             System.out.println("안녕하세요 자판기 입니다.");
             //키입력
