@@ -6,6 +6,7 @@ import java.lang.reflect.Method;
 class ReflectionDemo {
     public  String noSecret = "안비밀입니다.";
     private String secret = "비밀입니다.";
+    public int age;
 
     public ReflectionDemo() {
         System.out.println("ReflectionDemo 생성자 실행");
@@ -17,6 +18,11 @@ class ReflectionDemo {
 
     private String reveal(String code) {
         return "Access granted to: " + code;
+    }
+
+    public int age(int age) {
+        this.age = age;
+        return age;
     }
 }
 
@@ -44,16 +50,21 @@ public class Main {
 
         try {
             Object instance = clazz.getDeclaredConstructor().newInstance();
+
             Method greetMethod = clazz.getDeclaredMethod("greet", String.class);
             Object greetResult = greetMethod.invoke(instance, "j797");
+
             Method revealMethod = clazz.getDeclaredMethod("reveal", String.class);
             revealMethod.setAccessible(true);
             Object revealResult = revealMethod.invoke(instance, "797");
+
+            Method ageMethod = clazz.getDeclaredMethod("age", int.class);
+
             System.out.println("\n[퍼블릭 메서드 실행 결과]");
             System.out.println("greet(): " + greetResult);
             System.out.println("reveal(): " + revealResult);
         } catch (Exception e) {
-            e.printStackTrace();;
+            e.printStackTrace();
         }
     }
 }
