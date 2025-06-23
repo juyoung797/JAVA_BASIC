@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"TIL250623.annotation","l":"Main"}];updateSearchResults();
