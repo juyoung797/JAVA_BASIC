@@ -21,8 +21,9 @@ public class Main {
         }
     }
     public static void main(String[] args) {
-//        writeFile("lunch-menu.txt", "\n\n저메추 받아요");
-//        System.out.println("파일 생성 완료");
+        writeFile("lunch-menu.txt", "lunch-menu");
+        writeFile("lunch-menu.txt", "떡볶이");
+        System.out.println("파일 생성 완료");
         readFile("lunch-menu.txt");
     }
 }
